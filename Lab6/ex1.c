@@ -7,7 +7,7 @@ int main(void){
 
   fflush(stdout); // in khi gap Pipe
 
-  unsignedlef left = ALIVE_SEC; // cha ghi cho bien nay
+  unsigned left = ALIVE_SEC; // cha ghi cho bien nay
   while (left>0) {
     left = sleep(left);
   }
