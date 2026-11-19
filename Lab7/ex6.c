@@ -14,6 +14,7 @@ LẬP TRÌNH HỆ THỐNG LAB 7 – BÀI TẬP
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include <fcntl.h>
 int main(){
     int fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
     if(fd == -1){
@@ -24,5 +25,7 @@ int main(){
     close(fd);
     printf("Day di ong chau oi\n");
     printf("Hello world\n");
+    fflush(stdout);// all output to output.txt
+    // run this then cat output.txt to check the result
     return 0;
 }
