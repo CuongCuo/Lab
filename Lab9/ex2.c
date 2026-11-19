@@ -11,23 +11,29 @@ vùng nhớ nếu cần.
 Kiểm thử
 */
 #include <stdio.h>
-#include <string.h>
 #include <pthread.h>
 
-void *sum(void *arg){
-    int n = *(int*)arg;
-    int tong = 0;
-    for (int i = 0; i <=n; i++) tong += i;
-    printf("%d\n",tong);
-    return NULL;
-}
-int main(){
-    int n;
-    printf("Nhap so nguyen duong: \n");
-    scanf("%d", &n);
-    pthread_t thread;
-    pthread_create(&thread,NULL,sum,NULL);
-    pthread_join(thread,NULL);
-    return 0;
+void *tinh_tong(void *arg) {
+    int n = *(int *)arg;
+    static long long ket_qua;
 
+    ket_qua = 0;
+    for (int i = 1; i <= n; i++)
+        ket_qua += i;
+    return &ket_qua; // NOT RETURN NULL
+}
+
+int main(void) {
+    int n;
+    pthread_t tid;
+    void *ret;
+
+    printf("Nhap so nguyen duong: ");
+    if (scanf("%d", &n) != 1 || n <= 0) return 1;
+
+    if (pthread_create(&tid, NULL, tinh_tong, &n) != 0) return 1;
+    if (pthread_join(tid, &ret) != 0) return 1;
+
+    printf("Tong = %lld\n", *(long long *)ret);
+    return 0;
 }
