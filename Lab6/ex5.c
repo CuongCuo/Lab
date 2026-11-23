@@ -6,7 +6,7 @@
 int main(){
   int fd = open(Hello.txt, O_RODONLY);
   char buf[256];
-  size_tn;
+  ssize_t n;
   int status;
 
   if(fd<0){
