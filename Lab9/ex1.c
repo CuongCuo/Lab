@@ -22,7 +22,7 @@ int main(){
     printf("Nhap so nguyen duonN: \n");
     scanf("%d", &n);
     pthread_t thread;
-    pthread_create(&thread,NULL,in_so,&n);
+    pthread_create(&thread,NULL,     ,&n);
     pthread_join(thread,NULL);
     printf("Main thread exiting..\n");
     return 0;
