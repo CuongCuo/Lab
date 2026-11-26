@@ -39,7 +39,7 @@
 
 ---
 
-## Bài 4
+## Bài 4 ( CHUA LAM)
 
 **4.1** Viết chương trình C tạo một luồng (thread) để:
 - Tính tổng các số chẵn từ 1 đến N (N được nhập từ bàn phím).
@@ -63,7 +63,7 @@ b) Đọc nội dung file `Hello.txt` bắt đầu từ **byte thứ 7** tính t
 
 ---
 
-## Bài 6
+## Bài 6 (CHUA LAM)
 
 Viết chương trình tạo file với hai lựa chọn:
 
@@ -150,7 +150,7 @@ Viết chương trình tạo một tiến trình con, trong đó tiến trình c
 
 ---
 
-## Bài 12
+## Bài 12 ( chua lam)
 
 Hoàn chỉnh chương trình C bên dưới mô phỏng một shell đơn giản (tiến trình cha) có thể thực thi các lệnh shell cơ bản.
 
@@ -190,7 +190,7 @@ void process_command(char *cmdbuf)
 
 ---
 
-## Bài 13
+## Bài 13(chua lam)
 
 Viết chương trình C trong đó tiến trình cha và tiến trình con trao đổi thông điệp với nhau:
 
@@ -211,7 +211,7 @@ Viết chương trình C mô phỏng lệnh pipe: `ls | wc -l`, trong đó:
 
 ---
 
-## Bài 15
+## Bài 15(chua lam)
 
 Viết chương trình C-Unix **liên tục kiểm tra mỗi 1 phút** và in danh sách các file bên trong một thư mục. Khi người dùng nhấn `Ctrl+C`, in ra thông báo `"Program is terminated by user"` và kết thúc chương trình.
 

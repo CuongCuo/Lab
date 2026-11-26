@@ -5,10 +5,14 @@
 long counter = 0;
 // tao 2 thread, pthread_t t1, t2
 
+static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
 void *work(void *arg){
     (void)arg;
     for(int i = 0; i < LOOP; i ++){
+        pthread_mutex_lock(&mutex);
         counter ++;
+        pthread_mutex_unlock(&mutex);
     }
     return NULL;
 }

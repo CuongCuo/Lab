@@ -14,8 +14,10 @@ void *gan(void *arg){
 
 int main(void){
     pthread_t tid;
+
     pthread_create(&tid,NULL,gan,NULL);
     pthread_join(tid, NULL);
+    
     printf("%d\n",shared_var);
     return 0;
 }
